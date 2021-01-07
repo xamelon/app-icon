@@ -1,0 +1,12 @@
+{:deps {:aliases [:nrepl :ui]}
+ :dev-http {8084 "resources/public"}
+ :builds {:app {:target :browser
+                :build-options {:cache-lever :off}
+                :build-hooks [(stylo.shadow/reload "resources/public/css/stylo.css")]
+                :devtools {:preloads [re-frisk.preload]
+                           :watch-dir "resources/public/css/stylo.css"}
+                :dev {:modules {:main {:entries [app.dev]}}
+                      :output-dir "resources/public/js"}
+                :release {:modules "resources/public/js"
+                          :output-dir "resources/public/js"}}}
+ }

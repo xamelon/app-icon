@@ -1,0 +1,11 @@
+(ns app.index.core
+  (:require [stylo.core :refer [c]])
+  )
+
+(defn core []
+  [:<>
+   [:h1 "This is app icon generator"]
+   [:div {:class (c [:bg :red300])} "hahahah"]
+   ]
+  
+  )

@@ -1,0 +1,5 @@
+(ns app.dev)
+
+(defn main []
+  (println "Console log")
+  )
